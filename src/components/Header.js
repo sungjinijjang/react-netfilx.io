@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import logo from "../svg/logo.svg";
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import styled from "styled-components";
 import { Button } from "./Button";
 import { Icon } from "react-icons-kit";
 import {ic_keyboard_arrow_right} from 'react-icons-kit/md/ic_keyboard_arrow_right'
+
 // Media Query
 import { generateMedia } from "styled-media-query";
 
@@ -13,8 +14,12 @@ class Header extends Component {
         return (
             <HeaderComponent className="header-container">
                 <div className="header-top">
-                <Logo src={logo} />
-                <Link className="signIn-btn">Sign In</Link>
+                <Link>
+                    <Logo className="logo" src={logo} />
+                </Link>
+                <NavLink to="/login" className="signIn-btn">
+                    Sign In
+                </NavLink>
                 </div>
                 {/* Header Content */}
                 <div className="header-content">
