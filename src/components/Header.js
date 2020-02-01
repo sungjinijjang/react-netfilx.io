@@ -18,17 +18,20 @@ class Header extends Component {
                     <Logo className="logo" src={logo} />
                 </Link>
                 <NavLink to="/login" className="signIn-btn">
-                    Sign In
+                Sign In
                 </NavLink>
                 </div>
                 {/* Header Content */}
                 <div className="header-content">
                     <Title>영화, TV 프 로 그 램</Title>
                     <SubTitle>다양한 디바이스에서 시청하세요.</SubTitle>
+                    <Link to="/choose-plan">
+                        
                     <Button className="main-offer-btn" primary>
                         try it now
                         <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
                         </Button>
+                    </Link>
                 </div>
             </HeaderComponent>
         );
@@ -46,13 +49,12 @@ const customMedia = generateMedia({
 
 //Logo
 const Logo = styled.img `
-width: 10rem;
-height: 3.5rem;
-position: absolute;
-top: 25%;
-left: 50%;
-transform: translate(-50%, -50%);
-margin-left: 0;
+    width: 11rem;
+    position: absolute;
+    top: 25%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    margin-left: 0;
     ${customMedia.lessThan('tablet')`
         left: 20%;
     `}
